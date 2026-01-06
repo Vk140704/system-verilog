@@ -1,0 +1,39 @@
+// Code your testbench here
+// or browse Examples
+module reduction_operator;
+  logic[4:0] a,b;
+  logic y;
+  
+  initial begin
+    a =5'b01010;
+    b =5'b0101x;
+    $display("The value of reduction operator");
+    y= &a;
+    $display("the value of bitwise and operation = %0d",y);
+    y= |a;
+    $display("the value of bitwise or operation = %0d",y);
+    y= ~&a;
+    $display("the value of bitwise nand operation = %0d",y);
+    y= ~|a;
+    $display("the value of bitwise nor operation = %0d",y);
+    y= ^a;
+    $display("the value of bitwise xor operation = %0d",y);
+    y= ~^a;
+    $display("the value of bitwise xnor operation = %0d",y);
+    
+    $display("The value of reduction operator");
+    y= &b;
+    $display("the value of bitwise and operation = %0d",y);
+    y= |b;
+    $display("the value of bitwise or operation = %0d",y);
+    y= ~&b;
+    $display("the value of bitwise nand operation = %0d",y);
+    y= ~|b;
+    $display("the value of bitwise nor operation = %0d",y);
+    y= ^b;
+    $display("the value of bitwise xor operation = %0d",y);
+    y= ~^b;
+    $display("the value of bitwise xnor operation = %0d",y);
+  end
+endmodule 
+  
